@@ -18,8 +18,6 @@ function random(min, max) {
 
 function playGame(playerSelection, computerSelection) {
 
-    alert(playerSelection);
-
     if (playerSelection == "Rock") {
         if (computerSelection == "Paper") {
             alert("You lose! Paper beat Rock");
@@ -33,6 +31,7 @@ function playGame(playerSelection, computerSelection) {
 
         if (computerSelection == "Rock") {
             alert("Tie!");
+            playGame(getPlayerSelection(), getComputerChoise());
         }
 
     }
@@ -40,6 +39,7 @@ function playGame(playerSelection, computerSelection) {
     if (playerSelection == "Paper") {
         if (computerSelection == "Paper") {
             alert("Tie!");
+            playGame(getPlayerSelection(), getComputerChoise());
         }
         if (computerSelection == "Scissor") {
             alert("You lose! Scissors beat Paper");
@@ -62,6 +62,7 @@ function playGame(playerSelection, computerSelection) {
         }
         if (computerSelection == "Scissor") {
             alert("Tie!");
+            playGame(getPlayerSelection(), getComputerChoise());
         }
     }
 }
