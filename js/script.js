@@ -1,3 +1,11 @@
+function getPlayerSelection() {
+    let selection = prompt("Input your Choise: Rock - Paper - Scissor");
+    selection = selection.toLowerCase();
+    let mayus = selection.charAt(0).toUpperCase();
+    selection = mayus + selection.slice(1);
+    alert(selection);
+}
+
 function getComputerChoise() {
     let options = ["Rock", "Paper", "Scissor"];
     let choise = random(0, 2);
@@ -40,4 +48,5 @@ function playGame(playerSelection, computerSelection) {
     }
 }
 
-alert(playGame("Rock", getComputerChoise()));
+// alert(playGame("Rock", getComputerChoise()));
+alert(getPlayerSelection());
