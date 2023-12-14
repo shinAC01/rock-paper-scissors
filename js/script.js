@@ -20,11 +20,11 @@ function playGame(playerSelection, computerSelection) {
 
     if (playerSelection == "Rock") {
         if (computerSelection == "Paper") {
-            return "You lose! Paper beat Rock";
+            return "You lose!";
         }
 
         if (computerSelection == "Scissor") {
-            return "You won! Rock beat Scissors";
+            return "You won!";
         }
 
         if (computerSelection == "Rock") {
@@ -38,19 +38,19 @@ function playGame(playerSelection, computerSelection) {
             return "Tie!";
         }
         if (computerSelection == "Scissor") {
-            return "You lose! Scissors beat Paper";
+            return "You lose!";
         }
         if (computerSelection == "Rock") {
-            return "You won! Paper beat Rock";
+            return "You won!";
         }
     }
 
     if (playerSelection == "Scissor") {
         if (computerSelection == "Paper") {
-            return "You won! Scissor beat Paper";
+            return "You won!";
         }
         if (computerSelection == "Rock") {
-            return "You lose! Rock beat Scissors";
+            return "You lose!";
         }
         if (computerSelection == "Scissor") {
             return "Tie!";
@@ -58,11 +58,38 @@ function playGame(playerSelection, computerSelection) {
     }
 }
 
-let result = playGame(getPlayerSelection(), getComputerChoise());
 
-if (result === "Tie!") {
-    alert(result);
-    result = playGame(getPlayerSelection(), getComputerChoise());
-} else {
-    alert(result);
+function Game() {
+
+    //contadores para almacenar las victorias y derrotas
+    let playerCount = 0;
+    let pcCount = 0;
+    let result; //variable que almacena la funcion del juego.
+
+    for (let i = 0; i < 5; i++) {
+        alert("Round: " + (i + 1)); //marco la ronda actual del juego
+
+        result = playGame(getPlayerSelection(), getComputerChoise());
+        //Los 3 casos posibles, en el caso del tie, se repite la ronda sin resultado
+        if (result === "You lose!") {
+            alert(result);
+            pcCount += 1;
+        } else if (result === "You won!") {
+            alert(result);
+            playerCount += 1;
+        } else {
+            alert(result);
+            i -= 1;
+        }
+    }
+
+    if (playerCount > pcCount) {
+        alert("You have won! Victories: " + playerCount + ", Defeats: " + playerCount);
+    } else if (playerCount < pcCount) {
+        alert("You have lose! Victories: " + playerCount + ", Defeats: " + playerCount);
+    } else {
+        alert("It's a tie!");
+    }
 }
+
+Game();
