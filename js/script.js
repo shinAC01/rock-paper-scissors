@@ -3,7 +3,7 @@ function getPlayerSelection() {
     selection = selection.toLowerCase();
     let mayus = selection.charAt(0).toUpperCase();
     selection = mayus + selection.slice(1);
-    alert(selection);
+    return selection;
 }
 
 function getComputerChoise() {
@@ -17,36 +17,53 @@ function random(min, max) {
 }
 
 function playGame(playerSelection, computerSelection) {
-    switch (playerSelection == "Rock") {
-        case computerSelection == "Paper":
+
+    alert(playerSelection);
+
+    if (playerSelection == "Rock") {
+        if (computerSelection == "Paper") {
             alert("You lose! Paper beat Rock");
-            break;
-        case computerSelection == "Scissor":
+            return;
+        }
+
+        if (computerSelection == "Scissor") {
             alert("You won! Rock beat Scissors");
-        case computerSelection == "Rock":
+            return;
+        }
+
+        if (computerSelection == "Rock") {
             alert("Tie!");
+        }
+
     }
 
-    switch (playerSelection == "Paper") {
-        case computerSelection == "Paper":
+    if (playerSelection == "Paper") {
+        if (computerSelection == "Paper") {
             alert("Tie!");
-            break;
-        case computerSelection == "Scissor":
+        }
+        if (computerSelection == "Scissor") {
             alert("You lose! Scissors beat Paper");
-        case computerSelection == "Rock":
+            return;
+        }
+        if (computerSelection == "Rock") {
             alert("You won! Paper beat Rock");
+            return;
+        }
     }
 
-    switch (playerSelection == "Scissor") {
-        case computerSelection == "Paper":
+    if (playerSelection == "Scissor") {
+        if (computerSelection == "Paper") {
             alert("You won! Scissor beat Paper");
-            break;
-        case computerSelection == "Rock":
+            return;
+        }
+        if (computerSelection == "Rock") {
             alert("You lose! Rock beat Scissors");
-        case computerSelection == "Scissor":
+            return;
+        }
+        if (computerSelection == "Scissor") {
             alert("Tie!");
+        }
     }
 }
 
-// alert(playGame("Rock", getComputerChoise()));
-alert(getPlayerSelection());
+playGame(getPlayerSelection(), getComputerChoise());
