@@ -20,51 +20,49 @@ function playGame(playerSelection, computerSelection) {
 
     if (playerSelection == "Rock") {
         if (computerSelection == "Paper") {
-            alert("You lose! Paper beat Rock");
-            return;
+            return "You lose! Paper beat Rock";
         }
 
         if (computerSelection == "Scissor") {
-            alert("You won! Rock beat Scissors");
-            return;
+            return "You won! Rock beat Scissors";
         }
 
         if (computerSelection == "Rock") {
-            alert("Tie!");
-            playGame(getPlayerSelection(), getComputerChoise());
+            return "Tie!";
         }
 
     }
 
     if (playerSelection == "Paper") {
         if (computerSelection == "Paper") {
-            alert("Tie!");
-            playGame(getPlayerSelection(), getComputerChoise());
+            return "Tie!";
         }
         if (computerSelection == "Scissor") {
-            alert("You lose! Scissors beat Paper");
-            return;
+            return "You lose! Scissors beat Paper";
         }
         if (computerSelection == "Rock") {
-            alert("You won! Paper beat Rock");
-            return;
+            return "You won! Paper beat Rock";
         }
     }
 
     if (playerSelection == "Scissor") {
         if (computerSelection == "Paper") {
-            alert("You won! Scissor beat Paper");
-            return;
+            return "You won! Scissor beat Paper";
         }
         if (computerSelection == "Rock") {
-            alert("You lose! Rock beat Scissors");
-            return;
+            return "You lose! Rock beat Scissors";
         }
         if (computerSelection == "Scissor") {
-            alert("Tie!");
-            playGame(getPlayerSelection(), getComputerChoise());
+            return "Tie!";
         }
     }
 }
 
-playGame(getPlayerSelection(), getComputerChoise());
+let result = playGame(getPlayerSelection(), getComputerChoise());
+
+if (result === "Tie!") {
+    alert(result);
+    result = playGame(getPlayerSelection(), getComputerChoise());
+} else {
+    alert(result);
+}
