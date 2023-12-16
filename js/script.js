@@ -67,7 +67,7 @@ function Game() {
     let result; //variable que almacena la funcion del juego.
 
     for (let i = 0; i < 5; i++) {
-        alert("Round: " + (i + 1)); //marco la ronda actual del juego
+        alert("Round: " + (i + 1)); //variable para marcar la ronda actual del juego
 
         result = playGame(getPlayerSelection(), getComputerChoise());
         //Los 3 casos posibles, en el caso del tie, se repite la ronda sin resultado
@@ -83,6 +83,7 @@ function Game() {
         }
     }
 
+    /* Usamos 3 ifs para poder evaluar si el jugador gana o pierde */
     if (playerCount > pcCount) {
         alert("You have won! Victories: " + playerCount + ", Defeats: " + playerCount);
     } else if (playerCount < pcCount) {
