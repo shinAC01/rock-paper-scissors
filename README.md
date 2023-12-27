@@ -4,7 +4,7 @@
 
 **LinkedIn:** linkedin.com/in/migueldavidgonzalezdeltoro
 
-**Email:** migueldavidgonzalezdeltoro@gmail.com
+**Email:** shinamv01@gmail.com
 
 **Phone:** +53 56853256
 
