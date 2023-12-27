@@ -64,10 +64,14 @@ function Game() {
     //contadores para almacenar las victorias y derrotas
     let playerCount = 0;
     let pcCount = 0;
+    let round = 1;
+    let roundCount = document.querySelector('.round-content');
+    let choise = 1
     let result; //variable que almacena la funcion del juego.
 
-    for (let i = 0; i < 5; i++) {
-        alert("Round: " + (i + 1)); //variable para marcar la ronda actual del juego
+    while (choise > 0) {
+        const roundS = SVGAnimatedInteger.toString(round);
+        roundCount.textContent = roundCount.textContent + round; //variable para marcar la ronda actual del juego
 
         result = playGame(getPlayerSelection(), getComputerChoise());
         //Los 3 casos posibles, en el caso del tie, se repite la ronda sin resultado
@@ -81,6 +85,9 @@ function Game() {
             alert(result);
             i -= 1;
         }
+
+        choise = Number.parseInt(prompt("If you want to continue, type 1, if not, type 0: "));
+        round += 1;
     }
 
     /* Usamos 3 ifs para poder evaluar si el jugador gana o pierde */

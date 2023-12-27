@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-content {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 100px;
+    /* display: flex;
+    flex-direction: column; */
+
+    padding-bottom: 30px;
+}
+
+.title-content {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.p-one {
+    text-align: center;
+}
+
+.p-two {
+    text-align: center;
+}
+
+.p-three {
+    text-align: center;
+}
+
+
+/* img {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+} */
