@@ -6,7 +6,7 @@
 
 **Email:** migueldavidgonzalezdeltoro@gmail.com
 
-**Phone:** +52 1 55 85 25 59 41
+**Phone:** +53 56853256
 
 **Summary**
 
